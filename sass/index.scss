@@ -1,0 +1,62 @@
+$browser-default-font-size: 75px !default;
+@function pr($px) {
+  @return $px / $browser-default-font-size * 1rem;
+}
+
+.wrap {
+  width: pr(750px);
+  margin: 0 auto;
+}
+
+.head {
+  background: #fff;
+  text-align: center;
+  font-size: pr(48px);
+}
+
+.y-map {
+  background: #f5f5f5;
+  .y-baz {
+    position: relative;
+    p {
+      padding-left: pr(24px);
+      line-height: pr(70px);
+      color: #999;
+      margin-bottom: 0;
+    }
+    ul {
+      font-size: pr(26px);
+      &.list {
+        width: 100%;
+        background: #fff;
+        padding-bottom: pr(24px);
+        li {
+          padding: 0 pr(24px);
+          height: pr(86px);
+          a {
+            display: block;
+            line-height: pr(86px);
+            border-bottom: 1px solid #ddd;
+          }
+        }
+      }
+    }
+  }
+  .y-raz {
+    width: pr(60px);
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    ul {
+      li {
+        display: block;
+        text-align: center;
+        line-height: pr(30px);
+        &.cur {
+          color: #cf3340;
+        }
+      }
+    }
+  }
+}
